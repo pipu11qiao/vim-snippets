@@ -89,6 +89,21 @@ $1
 $0
 endsnippet
 
+snippet "cd(\w+)?" "Codeblock With Lan" br
+\`\`\``!p
+if match.group(1) == "html":
+	snip.rv="html"
+elif match.group(1) == "css":
+	snip.rv="css"
+elif match.group(1) == "js":
+	snip.rv="javascript"
+`
+$1
+\`\`\`
+$0
+endsnippet
+
+
 snippet refl "Reference Link"
 [${1:${VISUAL:Text}}][${2:id}]$0
 
